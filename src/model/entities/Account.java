@@ -50,7 +50,7 @@ public class Account {
 		this.withdrawLimit = withdrawLimit;
 	}
 	
-	public void deposit(Double amount) {
+	public void deposit(Double amount) {		
 		this.balance += amount;
 	}
 	
