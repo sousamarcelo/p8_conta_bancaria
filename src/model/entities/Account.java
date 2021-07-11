@@ -38,11 +38,7 @@ public class Account {
 	
 	public Double getBalance() {
 		return balance;
-	}
-	
-	public void setBalance(Double balace) {
-		this.balance = balace;
-	}
+	}	
 	
 	public Double getWithdrawLimit() {
 		return withdrawLimit;
