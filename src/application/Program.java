@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import model.entities.Account;
 import model.exception.DomainException;
-import sun.security.action.GetBooleanAction;
 
 public class Program {
 	
@@ -21,7 +20,7 @@ public class Program {
 		System.out.print("Holder: ");
 		sc.nextLine();
 		String holder = sc.nextLine();
-		System.out.print("Initial balance");
+		System.out.print("Initial balance: ");
 		Double balance = sc.nextDouble();
 		System.out.print("Withdraw limit: ");
 		Double withdrawLimit = sc.nextDouble();
@@ -31,15 +30,15 @@ public class Program {
 		
 		System.out.print("Enter amount for withdraw: ");
 		account.withdraw(sc.nextDouble());
-		System.out.println("New balance: " + account.getBalance());
+		System.out.println("New balance: " + String.format("%.2f", account.getBalance()) );
 		
 		}
 		catch (DomainException e) {
 			System.out.println("Withdraw error: " + e.getMessage());
 		}
-		
-		
-		sc.close();
+		finally {
+			sc.close();			
+		}
 	}
 
 }
